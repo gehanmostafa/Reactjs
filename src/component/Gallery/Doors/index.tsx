@@ -8,7 +8,7 @@ export default function Doors() {
       <Header attr="text-center lg:text-start">
         Gallery
         <div className="inline-block ">
-          <FontAwesomeIcon icon={faArrowRight} className="px-3 " />
+          <FontAwesomeIcon icon={faArrowRight} className="px-3 fa-beat-fade" />
           <span className="text-black">Doors</span>
         </div>
       </Header>

@@ -16,8 +16,8 @@ export default {
         Inter: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        heroImage: "url('src/assets/images/home.jpg')",
-        aboutImage: "url('src/assets/images/about.jpeg')"
+        heroImage: "url('/images/home.jpg')",
+        aboutImage: "url('/images/about.jpeg')"
       },
     },
   },

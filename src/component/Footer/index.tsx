@@ -1,5 +1,5 @@
-import srcImg1 from "../../assets/images/footer2.jpg";
-import srcImg from "../../assets/images/footer.jpg";
+import srcImg1 from "/images/footer2.jpg";
+import srcImg from "/images/footer.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 

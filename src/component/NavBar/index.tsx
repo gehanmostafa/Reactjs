@@ -1,6 +1,6 @@
 // Importing necessary components from react-router-dom
 
-import logo from "../../assets/images/logo.jpg";
+import logo from "/images/logo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useLocation } from "react-router-dom";

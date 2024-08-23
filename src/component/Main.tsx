@@ -1,18 +1,17 @@
+import About from "./Home/SubAbout";
+import Gallery from "./Gallery";
+import Home from "./Home";
 
-import About from './About';
-import Gallery from './Gallery';
-
-import Contact from './Contact';
 
 const Main = () => {
-    return (
-        <div>
-        
-            <Gallery/>
-            <About />
-            <Contact/>
-        </div>
-    );
-}
+  return (
+    <div>
+    
+      <Home />
+      <Gallery />
+      <About />
+    </div>
+  );
+};
 
 export default Main;

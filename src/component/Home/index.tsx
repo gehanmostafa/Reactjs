@@ -1,12 +1,14 @@
 import Button from "../../UI/Button";
 
+
 const Hero = () => {
   const header = " font-semibold lg:text-[80px] ";
   const flexCenter = "flex justify-center items-center flex-col";
   return (
     <>
+   
       <div
-        className={` ${flexCenter} bg-heroImage w-full h-[100vh]  bg-center bg-cover  text-center mt-8 `}
+        className={` ${flexCenter} bg-heroImage  w-full h-[100vh]  bg-center bg-cover  text-center mt-8 `}
       >
         <div className=" md:w-[60%]   ">
           <h1 className={` ${header} lg:leading-[130px]  text-[45px]`}>
@@ -22,14 +24,13 @@ const Hero = () => {
             <Button>contact us</Button>
           </div>
         </div>
-          </div>
-          <div className={`bg-main  text-center py-2 min-h-36 ${flexCenter}` }>
-              <p className=" text-maincolor  container w-[80%]  mx-auto font-semibold text-[24px] capitalize">
-              Take a peek at the design we created notice the modern style of clean lines and clutter-free designs with neutral tones and natural textures
-
-         </p>
-          </div>
-          
+      </div>
+      <div className={`bg-main  text-center py-2 min-h-36 ${flexCenter}`}>
+        <p className=" text-maincolor  container w-[80%]  mx-auto font-semibold text-[24px] capitalize">
+          Take a peek at the design we created notice the modern style of clean
+          lines and clutter-free designs with neutral tones and natural textures
+        </p>
+      </div>
     </>
   );
 };

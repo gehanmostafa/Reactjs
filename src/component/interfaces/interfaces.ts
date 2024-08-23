@@ -1,5 +1,6 @@
 
  export interface IGallery {
     imgUrl: string,
-    id: number
+     id: number, 
+     category?:string
 }

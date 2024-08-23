@@ -1,16 +1,19 @@
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
-import { ReactNode } from 'react';
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+import { ReactNode } from "react";
 
-interface ICall {
-    icon: FontAwesomeIconProps["icon"];
-    children: ReactNode;
-    
- }
-export default function Call( {icon , children} :ICall) {
+interface ICall extends React.HTMLAttributes<HTMLDivElement> {
+  icon: FontAwesomeIconProps["icon"];
+  children: ReactNode;
+ 
+}
+export default function Call({ icon, children , ...rest }: ICall) {
   return (
-    <div>
-          <FontAwesomeIcon icon={icon} className="block  w-6 h-6 mb-1" />
-          {children}
+    <div className="flex flex-col justify-center items-center  " {...rest}>
+      <FontAwesomeIcon icon={icon} className="block   w-9 h-14 mb-1 text-white" />
+      {children}
     </div>
   );
 }

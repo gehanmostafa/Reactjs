@@ -4,14 +4,14 @@ import {
 } from "@fortawesome/react-fontawesome";
 import { ReactNode } from "react";
 
-interface IAddress {
+interface IAddress extends React.HTMLAttributes<HTMLDivElement> {
   icon: FontAwesomeIconProps["icon"];
   children: ReactNode;
 }
-export default function Address({ icon, children }: IAddress) {
+export default function Address({ icon, children  , ...rest}: IAddress) {
   return (
-    <div>
-      <FontAwesomeIcon icon={icon} className="block  w-6 h-6 mb-1" />
+    <div className=" leading-9 text-xl font-bold text-center flex flex-col justify-center items-center">
+      <FontAwesomeIcon icon={icon} className="block   w-9 h-14 mb-1 " />
       {children}
     </div>
   );

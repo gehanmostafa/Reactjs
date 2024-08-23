@@ -19,7 +19,9 @@ import Header from "../Header/index.tsx";
 const Contact = () => {
   /*______________State__________*/
   const [show, setShow] = useState<string | null>(null);
-  const divRef = useRef<HTMLDivElement | null>(null); 
+ 
+  const overlayRef = useRef<HTMLDivElement | null>(null); 
+
   const location = useLocation();
   const header = location.pathname==="/" ?null : <Header>Contact Us</Header>
   /*_____________Render__________*/
@@ -27,18 +29,18 @@ const Contact = () => {
     setShow(show);
   };
     const handleClickOutside = (event:MouseEvent) => {
-      if (divRef.current && !divRef.current.contains(event.target as Node)) {
-        setShow(""); // إخفاء العنصر عند النقر خارج
-      }
+  
+         if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
+           setShow(""); // إخفاء العنصر عند النقر خارج
+         }
     };
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside)},
   []);
   return (
     <>
-    {header}
+      {header}
       <div className="  flex  w-[100%]  flex-col  pt-4  bg-[#F3F5FA] justify-center items-center gap-14  lg:p-40  lg:flex-row">
-  
         <Item
           icon={faPhone}
           children={"call"}
@@ -57,10 +59,17 @@ const Contact = () => {
       </div>
 
       {show && (
-        <div className=" " ref={divRef}>
-          <div className="bg-maincolor absolute    w-[40%px] h-[40%px] top-[50%] left-[50%] translate-y-[-50%]  translate-x-[-50%] p-2 rounded-[20px] shadow-xl">
+        <div className="">
+          <div className="bg-[#F3F5FA] blur-2xl opacity-60  absolute inset-0 "></div>
+          <div
+            ref={overlayRef}
+            className="bg-maincolor absolute  min-w-[300px] min-h-[33%] top-[50%] left-[50%] translate-y-[-50%]  translate-x-[-50%] rounded-[20px] shadow-xl"
+          >
             {show == "call" && (
-              <Call icon={faPhone}>
+              <Call
+                icon={faPhone}
+                className=" leading-9 text-xl font-bold text-center flex flex-col justify-center items-center"
+              >
                 <h4>01222473333 </h4>
                 <h4>01113332226</h4>
                 <h4> 01001456795</h4>
@@ -76,17 +85,9 @@ const Contact = () => {
               </Address>
             )}
             {show == "message" && (
-              <Message>
-                <Input type="text" id="name" name="name" />
-                <Input type="number" id="phone" name="phone" />
-                <Input type="email" id="massage" name="Email" />
-                <div>
-                  <label htmlFor="textarea">massage</label>
-                  <textarea id="textarea"></textarea>
-                </div>
-
-                <Button>Submit</Button>
-              </Message>
+              <Message />
+      
+              
             )}
           </div>
         </div>

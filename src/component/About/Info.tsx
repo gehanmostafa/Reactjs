@@ -1,22 +1,20 @@
-
-
-const Info=()=> {
+const Info = () => {
   return (
     <div className="bg-aboutImage bg-cover bg-center relative min-h-[80vh]">
       <div className=" inset-0 bg-[#ffffff] opacity-70  min-h-[80vh]">
         <div className="container w-[80%] m-auto">
-          <h2 className="text-center font-bold text-[32px]  py-4">
+          <h2 className="text-center font-bold  lg:text-[32px]  leading-10  text-[30px] py-4 ">
             We are CI Group (Comprehensive International Group) with over 18
             years of experience in general contracting and construction.
           </h2>
-          <div className=" text-[24px] font-semibold leading-10  ">
+          <div className=" lg:text-[24px] font-semibold leading-10 lg:text-start  text-center">
             <p>
               The General Manager of (CI) Group, Engineer Islam Adel graduated
               from Higher Technological Institute in 2002. He established this
               company in 2004 after careful study and with great ambition and
               determination.
             </p>
-            <p >
+            <p>
               Since 2004, our company is one of the largest companies in Egypt
               specialized in the design and implementation of all general
               contracting works, as well as the supply and installation of all
@@ -37,5 +35,5 @@ const Info=()=> {
       </div>
     </div>
   );
-}
+};
 export default Info;

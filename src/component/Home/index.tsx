@@ -8,7 +8,7 @@ const Hero = () => {
     <>
    
       <div
-        className={` ${flexCenter} bg-heroImage  w-full h-[100vh]  bg-center bg-cover  text-center mt-8 `}
+        className={` ${flexCenter} bg-heroImage  w-full h-[100vh]  bg-center bg-cover  text-center  `}
       >
         <div className=" md:w-[60%]   ">
           <h1 className={` ${header} lg:leading-[130px]  text-[45px]`}>

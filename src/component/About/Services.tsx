@@ -4,10 +4,10 @@
 
 const Services=()=> {
   return (
-    <div className="flex container w-[83%] m-auto  px-2 py-5">
+    <div className="flex container w-[100%] lg:w-[83%] m-auto  px-2 py-5 ">
       <div>
         <h2 className="font-bold text-3xl text-[30px]">Services</h2>
-        <p className="py-2 pr-[4.5rem] font-medium text-lg ">
+        <p className=" py-2  lg:pr-[4.5rem] font-medium text-lg ">
           Many services that you need during the construction and renovation
           periods like: A general contracting, including Plumping, Electricity,
           Partitions, Ceilings, Painting, Flooring, Gypsum Board, Doors,

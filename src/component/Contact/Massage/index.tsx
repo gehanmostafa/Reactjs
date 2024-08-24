@@ -16,8 +16,8 @@ export default function Message() {
         </label>
         <textarea
           id="textarea"
-          cols="24"
-          rows="6"
+          cols={24}
+          rows={6}
           className="resize-none
           flex-grow  rounded-lg outline-green-400   "
         ></textarea>

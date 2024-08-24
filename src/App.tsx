@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Gallery from "./component/Gallery";
 import About from "./component/About";
-
+import "./App.css"
 import Main from "./component/Main";
 import Footer from "./component/Footer";
 import Contact from "./component/Contact";

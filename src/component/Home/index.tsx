@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../UI/Button";
 
 
@@ -6,7 +7,6 @@ const Hero = () => {
   const flexCenter = "flex justify-center items-center flex-col";
   return (
     <>
-   
       <div
         className={` ${flexCenter} bg-heroImage  w-full h-[100vh]  bg-center bg-cover  text-center  `}
       >
@@ -20,8 +20,12 @@ const Hero = () => {
             will help create a sense of trust and comfort
           </p>
           <div className={`${flexCenter} gap-2 mt-4  md:flex-row`}>
-            <Button>about us</Button>
-            <Button>contact us</Button>
+            <Button>
+              <Link to={"/about"}>about us</Link>
+            </Button>
+            <Button>
+              <Link to={"/contact"}> contact us</Link>
+            </Button>
           </div>
         </div>
       </div>

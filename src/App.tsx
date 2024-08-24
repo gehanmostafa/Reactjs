@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Gallery from "./component/Gallery";
 import About from "./component/About";
-import "./App.css"
+import "./App.css";
 import Main from "./component/Main";
 import Footer from "./component/Footer";
 import Contact from "./component/Contact";
@@ -10,8 +10,6 @@ import Doors from "./component/Gallery/Doors";
 import IntroDesign from "./component/Gallery/IntroDesign";
 import DressingRoom from "./component/Gallery/DressingRoom";
 import Kitchens from "./component/Gallery/kitchens";
-
-
 
 function App() {
   return (

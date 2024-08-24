@@ -1,5 +1,3 @@
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DataInteriorDesign } from "../../Data/data";
 import Header from "../../Header";

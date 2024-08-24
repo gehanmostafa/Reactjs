@@ -1,15 +1,16 @@
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+import { ReactNode } from "react";
 
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
-import { ReactNode } from 'react';
-
-interface IContact extends React.HTMLAttributes<HTMLDivElement>{
+interface IContact extends React.HTMLAttributes<HTMLDivElement> {
   icon: FontAwesomeIconProps["icon"];
   children: ReactNode;
   onclick: () => void;
-  attr?:string
-
+  attr?: string;
 }
-export default function Item({ icon  , children , onclick , attr } :IContact) {
+export default function Item({ icon, children, onclick, attr }: IContact) {
   return (
     <>
       <div

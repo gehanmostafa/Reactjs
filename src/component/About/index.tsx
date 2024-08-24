@@ -1,17 +1,14 @@
-import Header from "../Header"
-import Info from "./Info"
-import Services from "./Services"
+import Header from "../Header";
+import Info from "./Info";
+import Services from "./Services";
 
-
-const  About =  ()=> {
+const About = () => {
   return (
-      <div>
-          <Header>
-              About
-          </Header>
-          <Info />
-          <Services/>
+    <div>
+      <Header>About</Header>
+      <Info />
+      <Services />
     </div>
-  )
-}
-export default About
+  );
+};
+export default About;

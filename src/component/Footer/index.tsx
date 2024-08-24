@@ -1,12 +1,15 @@
 import srcImg1 from "/images/footer2.jpg";
 import srcImg from "/images/footer.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import {  NavLink } from "react-router-dom";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { NavLink } from "react-router-dom";
 
-
-
-const  Footer=()=> {
+const Footer = () => {
   return (
     <div className="bg-main lg:pt-10   lg:px-5 flex flex-col md:flex-row relative md:py-5  max-h-[200px] overflow-hidden ">
       <div className="flex gap-8 px-7 ">
@@ -56,6 +59,6 @@ const  Footer=()=> {
       </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

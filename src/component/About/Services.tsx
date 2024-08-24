@@ -1,8 +1,4 @@
-
-
-
-
-const Services=()=> {
+const Services = () => {
   return (
     <div className="flex container w-[100%] lg:w-[83%] m-auto  px-2 py-5 ">
       <div>
@@ -13,9 +9,9 @@ const Services=()=> {
           Partitions, Ceilings, Painting, Flooring, Gypsum Board, Doors,
           Windows, Lighting, Air conditioning, Decoration Accessory, Furniture,
           kitchens, dressing rooms...etc.
-          <br/>
-          All work is done under the supervision
-          of our architects to ensure we stick to quality and safety standards.
+          <br />
+          All work is done under the supervision of our architects to ensure we
+          stick to quality and safety standards.
         </p>
       </div>
       <div>
@@ -24,13 +20,12 @@ const Services=()=> {
           You can relax in the knowledge that your project is being managed by a
           team of experts who will plan out the space efficiently with
           meticulous attention to detail and personal service.
-          <br/>
-          We understand the
-          requirements of our customers and aim to make your home design
-          reflects the sense of elegance and quality of execution.
+          <br />
+          We understand the requirements of our customers and aim to make your
+          home design reflects the sense of elegance and quality of execution.
         </p>
       </div>
     </div>
   );
-}
-export default  Services
+};
+export default Services;

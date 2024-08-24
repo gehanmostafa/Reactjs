@@ -10,7 +10,7 @@ const Navbar = () => {
   const flexBetween = " flex items-center justify-between ";
   const location = useLocation();
   const bgColor = location.pathname === "/" ? "bg-white" : "bg-maincolor";
- 
+
   const [isNavVisible, setIsNavVisible] = useState(false);
   const openNavbar = () => {
     setIsNavVisible(true);

@@ -1,6 +1,6 @@
 import { IGallery } from "../interfaces/interfaces";
 
-export const DataImage: IGallery [] = [
+export const DataImage: IGallery[] = [
   {
     imgUrl: "/images/Ellipse 3.jpg",
     id: 1,
@@ -11,7 +11,7 @@ export const DataImage: IGallery [] = [
     id: 2,
     category: "Dressing Room",
   },
-  
+
   {
     imgUrl: "/images/Ellipse 2.jpg",
     id: 3,
@@ -87,7 +87,6 @@ export const DataInteriorDesign: IGallery[] = [
     id: 7,
     imgUrl: "/images/InteriorDesign/Introdesign7.jpg",
   },
-
 ];
 export const DataDressingRoom: IGallery[] = [
   {
@@ -118,17 +117,19 @@ export const DataDressingRoom: IGallery[] = [
     id: 7,
     imgUrl: "/images/Dressing Room/DressingRoom7.jpg",
   },
-    {
+  {
     id: 8,
     imgUrl: "/images/Dressing Room/DressingRoom8.jpg",
-  },  {
+  },
+  {
     id: 9,
     imgUrl: "/images/Dressing Room/DressingRoom9.jpg",
-  },  {
+  },
+  {
     id: 10,
     imgUrl: "/images/Dressing Room/DressingRoom10.jpg",
   },
- {
+  {
     id: 11,
     imgUrl: "/images/Dressing Room/DressingRoom11.jpg",
   },
@@ -162,17 +163,19 @@ export const Datakitchens: IGallery[] = [
     id: 7,
     imgUrl: "/public/images/kitchens/Rectangle 15.jpg",
   },
-    {
+  {
     id: 8,
     imgUrl: "/public/images/kitchens/Rectangle 16.jpg",
-  },  {
+  },
+  {
     id: 9,
     imgUrl: "/public/images/kitchens/Rectangle 16.jpg",
-  },  {
+  },
+  {
     id: 10,
     imgUrl: "/public/images/kitchens/Rectangle 18.jpg",
   },
- {
+  {
     id: 11,
     imgUrl: "/public/images/kitchens/Rectangle 5.jpg",
   },

@@ -13,32 +13,33 @@ import Message from "./Massage";
 import { useLocation } from "react-router-dom";
 import Header from "../Header/index.tsx";
 
-
-
 const Contact = () => {
   /*______________State__________*/
-  const [show, setShow] = useState<string | null>(null);
- 
-  const overlayRef = useRef<HTMLDivElement | null>(null); 
-
   const location = useLocation();
   const header =
     location.pathname === "/" ? null : (
       <Header attr=" absolute top-20 bg-transparent">Contact Us</Header>
     );
+  const [show, setShow] = useState<string | null>(null);
+
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+
   /*_____________Render__________*/
   const handleClick = (show: string) => {
     setShow(show);
   };
-    const handleClickOutside = (event:MouseEvent) => {
-  
-         if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
-           setShow("");
-         }
-    };
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      overlayRef.current &&
+      !overlayRef.current.contains(event.target as Node)
+    ) {
+      setShow("");
+    }
+  };
+
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside)},
-  []);
+    document.addEventListener("mousedown", handleClickOutside);
+  }, []);
   return (
     <>
       {header}
@@ -71,25 +72,8 @@ const Contact = () => {
             ref={overlayRef}
             className="bg-maincolor absolute  min-w-[300px] min-h-[33%] top-[50%] left-[50%] translate-y-[-50%]  translate-x-[-50%] rounded-[20px] shadow-xl"
           >
-            {show == "call" && (
-              <Call
-                icon={faPhone}
-                className=" leading-9 text-xl font-bold text-center flex flex-col justify-center items-center"
-              >
-                <h4>01222473333 </h4>
-                <h4>01113332226</h4>
-                <h4> 01001456795</h4>
-              </Call>
-            )}
-
-            {show == "address" && (
-              <Address icon={faLocationDot} >
-                <h4>Head office Zahraa El</h4>
-                <h4>Maadi</h4>
-                <h4>7th sector</h4>
-                <h4> build No: 7/38 </h4>
-              </Address>
-            )}
+            {show == "call" && <Call icon={faPhone} />}
+            {show == "address" && <Address icon={faLocationDot} />}
             {show == "message" && <Message />}
           </div>
         </div>

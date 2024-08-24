@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../../UI/Button";
 
-
 const Hero = () => {
   const header = " font-semibold lg:text-[80px] ";
   const flexCenter = "flex justify-center items-center flex-col";

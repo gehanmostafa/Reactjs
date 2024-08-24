@@ -1,16 +1,11 @@
-
 interface IInput {
-
-    type: string;
+  type: string;
   id: string;
   name: string;
-
-
-
- }
- function Input({type , id , name } :IInput) {
+}
+function Input({ type, id, name }: IInput) {
   return (
-    <div className="flex pb-4 ">
+    <div className="flex md:pb-4  flex-col md:flex-row  ">
       <label
         htmlFor={id}
         className="text-lg font-bold  w-1/3 uppercase text-white pr-6"
@@ -26,4 +21,4 @@ interface IInput {
     </div>
   );
 }
-export default Input
+export default Input;

@@ -9,8 +9,7 @@ import Call from "./Call.tsx";
 import Address from "./Address.tsx";
 
 import Message from "./Massage";
-import Input from "./Massage/input.tsx";
-import Button from "../../UI/Button.tsx";
+
 import { useLocation } from "react-router-dom";
 import Header from "../Header/index.tsx";
 
@@ -23,7 +22,10 @@ const Contact = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null); 
 
   const location = useLocation();
-  const header = location.pathname==="/" ?null : <Header>Contact Us</Header>
+  const header =
+    location.pathname === "/" ? null : (
+      <Header attr=" absolute top-20 bg-transparent">Contact Us</Header>
+    );
   /*_____________Render__________*/
   const handleClick = (show: string) => {
     setShow(show);

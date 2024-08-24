@@ -33,7 +33,7 @@ const Contact = () => {
     const handleClickOutside = (event:MouseEvent) => {
   
          if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
-           setShow(""); // إخفاء العنصر عند النقر خارج
+           setShow("");
          }
     };
   useEffect(() => {
@@ -42,22 +42,26 @@ const Contact = () => {
   return (
     <>
       {header}
-      <div className="  flex  w-[100%]  flex-col  md:pt-4 pt-40  pb-2  bg-[#F3F5FA] justify-center items-center gap-14  lg:p-40 ">
-        <Item
-          icon={faPhone}
-          children={"call"}
-          onclick={() => handleClick("call")}
-        />
-        <Item
-          icon={faLocationDot}
-          children={"Address"}
-          onclick={() => handleClick("address")}
-        />
-        <Item
-          icon={faMessage}
-          children={"Message"}
-          onclick={() => handleClick("message")}
-        />
+      <div className=" flex justify-center items-center  w-[100%] h-[76vh]   bg-[#F3F5FA]   sm:pt-4 ">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 pt-10 ">
+          <Item
+            icon={faPhone}
+            children={"call"}
+            onclick={() => handleClick("call")}
+          />
+          <Item
+            icon={faLocationDot}
+            children={"Address"}
+            onclick={() => handleClick("address")}
+          />
+          <div className="col-span-2 md:col-span-1 flex justify-center">
+            <Item
+              icon={faMessage}
+              children={"Message"}
+              onclick={() => handleClick("message")}
+            />
+          </div>
+        </div>
       </div>
 
       {show && (
@@ -79,18 +83,14 @@ const Contact = () => {
             )}
 
             {show == "address" && (
-              <Address icon={faLocationDot}>
+              <Address icon={faLocationDot} >
                 <h4>Head office Zahraa El</h4>
                 <h4>Maadi</h4>
                 <h4>7th sector</h4>
                 <h4> build No: 7/38 </h4>
               </Address>
             )}
-            {show == "message" && (
-              <Message />
-      
-              
-            )}
+            {show == "message" && <Message />}
           </div>
         </div>
       )}

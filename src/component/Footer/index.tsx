@@ -8,7 +8,7 @@ import {  NavLink } from "react-router-dom";
 
 const  Footer=()=> {
   return (
-    <div className="bg-main lg:pt-10   lg:px-5 flex flex-col md:flex-row relative    ">
+    <div className="bg-main lg:pt-10   lg:px-5 flex flex-col md:flex-row relative md:py-5  max-h-[200px] overflow-hidden ">
       <div className="flex gap-8 px-7 ">
         <img
           src={srcImg1}
@@ -22,7 +22,7 @@ const  Footer=()=> {
         />
       </div>
 
-      <div className="flex flex-col  items-center justify-center gap-4  absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <div className="flex flex-col  items-center justify-center gap-4   absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <div className=" space-x-4    flex   ">
           <NavLink to="/" className="text-maincolor">
             Home

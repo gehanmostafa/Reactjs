@@ -2,16 +2,22 @@
 
 import logo from "/images/logo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faGlobe, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
   const flexBetween = " flex items-center justify-between ";
   const location = useLocation();
   const bgColor = location.pathname === "/" ? "bg-white" : "bg-maincolor";
-  const zTop =
-    location.pathname === "/contact" ? "z-20 absolute top-0 " : "";
-
+  const zTop = location.pathname === "/contact" ? "z-20 absolute top-0 " : "";
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const openNavbar = () => {
+    setIsNavVisible(true);
+  };
+  const closeNavbar = () => {
+    setIsNavVisible(false);
+  };
 
   const textColor = location.pathname == "/" ? "text-maincolor " : "text-white";
   return (
@@ -43,10 +49,57 @@ const Navbar = () => {
             icon={faGlobe}
             className="text-xl  hidden md:block"
           />
+          {/* Navbar content in small Screen */}
           <FontAwesomeIcon
             icon={faBars}
-            className="text-xl text-maincolor md:hidden"
+            className="text-xl md:text-maincolor md:hidden cursor-pointer"
+            onClick={openNavbar}
           />
+          {isNavVisible && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+              <ul
+                className={`bg-maincolor ${flexBetween} flex-col w-3/4 max-w-md p-6 rounded-lg relative`}
+              >
+                <FontAwesomeIcon
+                  icon={faXmark}
+                  className="text-2xl text-white cursor-pointer absolute top-4 right-4  transform hover:rotate-90 transition duration-300"
+                  onClick={closeNavbar}
+                />
+                <li className="my-2">
+                  <NavLink to="/" className="text-white " onClick={closeNavbar}>
+                    Home
+                  </NavLink>
+                </li>
+                <li className="my-2">
+                  <NavLink
+                    to="/gallery"
+                    className="text-white"
+                    onClick={closeNavbar}
+                  >
+                    Gallery
+                  </NavLink>
+                </li>
+                <li className="my-2">
+                  <NavLink
+                    to="/about"
+                    className="text-white"
+                    onClick={closeNavbar}
+                  >
+                    About Us
+                  </NavLink>
+                </li>
+                <li className="my-2">
+                  <NavLink
+                    to="/contact"
+                    className="text-white"
+                    onClick={closeNavbar}
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </nav>

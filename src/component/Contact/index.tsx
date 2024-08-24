@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <>
       {header}
-      <div className="  flex  w-[100%]  flex-col  pt-4  bg-[#F3F5FA] justify-center items-center gap-14  lg:p-40  lg:flex-row">
+      <div className="  flex  w-[100%]  flex-col  md:pt-4 pt-40  pb-2  bg-[#F3F5FA] justify-center items-center gap-14  lg:p-40 ">
         <Item
           icon={faPhone}
           children={"call"}
@@ -61,7 +61,7 @@ const Contact = () => {
       </div>
 
       {show && (
-        <div className="">
+        <div>
           <div className="bg-[#F3F5FA] blur-2xl opacity-60  absolute inset-0 "></div>
           <div
             ref={overlayRef}
